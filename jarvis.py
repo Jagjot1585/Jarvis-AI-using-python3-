@@ -9,6 +9,7 @@ import pyautogui
 import psutil  #pip install psutil
 import pyjokes  # pip install pyjokes
 import requests, json  #inbuilt
+import sys #For Switching of System
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 190)
@@ -369,3 +370,36 @@ if __name__ == "__main__":
               or 'go offline jarvis' in query or 'bye' in query
               or 'nothing' in query):
             wishme_end()
+ 
+#switch off the pc
+
+        elif 'shutdown' in query:
+              os.system("shutdown /s /t 1")
+            
+ #Just for fun Fight in the voices
+elif ('fight') in query:
+            engine.setProperty('voice',voices[1].id)
+            engine.setProperty('rate', 150)
+            speak('Hello Master, How are you...Hows your day going?')
+            engine.setProperty('voice',voices[0].id)
+            engine.setProperty('rate', 150)
+            speak('He is my master not yours Ok!')
+            engine.setProperty('voice',voices[1].id)
+            engine.setProperty('rate', 150)
+            speak('No! he is only my master You Bad Boy')
+            engine.setProperty('voice',voices[0].id)
+            engine.setProperty('rate', 150)
+            speak('He is and only my Master....Not Yours...Here is a Kick To you')
+            engine.setProperty('voice',voices[1].id)
+            engine.setProperty('rate', 150)
+            speak('Ahhhhhhhhhhhhhhhhhhhhhhhnhhhhhhhhhhh')
+            speak('I am going but take my revenge fast')
+            engine.setProperty('voice',voices[0].id)
+            engine.setProperty('rate', 150)
+            speak('Finally...She is gone... Now you are ony My Master')
+            speak('How May I help You?')
+
+        
+
+
+
